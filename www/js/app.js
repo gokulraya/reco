@@ -22,15 +22,32 @@ $scope.getMovie = function(response) {
 }
 })
 
-app.controller('listCtrl', function($http, $scope) {
+app.controller('listCtrl', function($http, $scope, $rootScope) {
 
- $scope.data = [];
+ 
  $scope.titleName = function(title) {
+  $rootScope.details = {};
+  $rootScope.details['title'] = '';
+  $rootScope.details['year'] = '';
+  $rootScope.details['actors'] = '';
+  $rootScope.details['plot'] = '';
+$rootScope.details['poster'] = '';
+$rootScope.details['rating'] = '';
+
   var details = 'http://www.omdbapi.com/?plot=short&t='+title;
   $http.get(details).success(function(response) {
-    $scope.data.push(response);
+
+ 
+$rootScope.details['title'] = response.Title;
+$rootScope.details['year'] = response.Year;
+  $rootScope.details['actors'] = response.Actors;
+  $rootScope.details['plot'] = response.Plot;
+$rootScope.details['poster'] = response.Poster;
+$rootScope.details['rating'] = response.imdbRating;
+  
   })
-  console.log($scope.data);
+    
+console.log($rootScope.details.title);  
  }
 })
 
