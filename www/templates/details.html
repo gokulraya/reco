@@ -3,13 +3,15 @@
     <div ng-controller="listCtrl">
     <div class="card">
       <div class="item item-text-wrap">
-        <div><h3>Name: {{details.title}}</h3>
-        <h3>{{details.year}}</h3>
-        <h3>{{details.actors}}</h3>
-        <h3>{{details.plot}}</h3>
-        <h3>{{details.poster}}</h3>
-        <h3>{{details.rating}}</h3>
+      <div class="item item-thumbnail-left">
+      <img src="{{details.poster}}">
+        <div><p><h3>Name:</h3> {{details.title}}</p>
+        <p><h3>Years: </h3>{{details.year}}</p>
+        <p><h3>Actors: </h3>{{details.actors}}</p>
+        <p><h3>Plot: </h3>{{details.plot}}</p>
+        <p><h3>IMDB: </h3>{{details.rating}}</p>
         </div>
+       </div>
        </div>
     </div>
     </div>
