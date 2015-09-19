@@ -47,7 +47,7 @@ $rootScope.details['rating'] = response.imdbRating;
   
   })
     
-console.log($rootScope.details.title);  
+alert($rootScope.details.title);  
  }
 })
 

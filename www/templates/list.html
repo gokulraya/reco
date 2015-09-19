@@ -2,11 +2,11 @@
 <ion-content>
         <div ng-controller="recoCtrl">
           <form name="testform" class="simple-form">
-             Movie Name: <input ng-model="val" name="anim" class="my-input" /> 
+            <label class="myLabel">Movie Name:</label>  <input ng-model="val" name="anim" class="my-input" /> 
              <input type="button" ng-click="getMovie()" value="Submit"/>
            </form>
-            <div class="list" ng-repeat="movie in movies track by $index" ng-controller="listCtrl">
-             <a class="item" href="#/details" ng-click="titleName(movie.Name)"><h3>{{movie.Name}}</h3></a>
+            <div class="card" ng-repeat="movie in movies track by $index" >
+             <a class="item" href="#/details" ng-click="titleName(movie.Name)" ><h3>{{movie.Name}}</h3></a>
         </div>
         </div>
 

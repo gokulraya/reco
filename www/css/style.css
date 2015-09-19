@@ -1,1 +1,16 @@
 /* Empty. Add your own CSS if you like */
+label.myLabel{
+
+	margin: 6px;
+	padding: 5px;
+}
+
+input.my-input {
+	margin: 10px;
+	padding: 4px;
+}
+
+div.card {
+	margin-top: 10px;
+	margin-right: 10px;
+}
